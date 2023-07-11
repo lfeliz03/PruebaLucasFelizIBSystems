@@ -142,6 +142,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdenesController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -158,6 +159,14 @@
     <Compile Include="Migrations\202307081338579_AgregarTablaClientes.designer.cs">
       <DependentUpon>202307081338579_AgregarTablaClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307110106375_AgregarTablaOrdenes.cs" />
+    <Compile Include="Migrations\202307110106375_AgregarTablaOrdenes.designer.cs">
+      <DependentUpon>202307110106375_AgregarTablaOrdenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307110112544_AgregarTablaProductosOrdenes.cs" />
+    <Compile Include="Migrations\202307110112544_AgregarTablaProductosOrdenes.designer.cs">
+      <DependentUpon>202307110112544_AgregarTablaProductosOrdenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AplicationDbContext.cs" />
     <Compile Include="Models\Clientes.cs" />
@@ -165,7 +174,9 @@
     <Compile Include="Models\ImagenesProducto.cs" />
     <Compile Include="Models\Ordenes.cs" />
     <Compile Include="Models\Productos.cs" />
+    <Compile Include="Models\ProductosOrdenes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\OrdenProductosViewModel.cs" />
     <Compile Include="ViewModels\ProductoImagenesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +240,8 @@
     <Content Include="Views\Clientes\Index.cshtml" />
     <Content Include="Views\Productos\Editar.cshtml" />
     <Content Include="Views\Productos\Detalles.cshtml" />
+    <Content Include="Views\Ordenes\Index.cshtml" />
+    <Content Include="Views\Ordenes\Crear.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -269,6 +282,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307081338579_AgregarTablaClientes.resx">
       <DependentUpon>202307081338579_AgregarTablaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307110106375_AgregarTablaOrdenes.resx">
+      <DependentUpon>202307110106375_AgregarTablaOrdenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307110112544_AgregarTablaProductosOrdenes.resx">
+      <DependentUpon>202307110112544_AgregarTablaProductosOrdenes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

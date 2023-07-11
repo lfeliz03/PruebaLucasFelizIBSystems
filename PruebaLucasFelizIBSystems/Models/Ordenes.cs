@@ -12,5 +12,6 @@ namespace PruebaLucasFelizIBSystems.Models
         public int IdOrden { get; set; }
         public Clientes Cliente { get; set; }
         public DateTime FechaHoraOrden { get; set; }
+        public EstatusOrden EstatusOrden { get; set; }
     }
 }

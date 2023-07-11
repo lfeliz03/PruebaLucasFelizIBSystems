@@ -1,0 +1,44 @@
+﻿@model List<PruebaLucasFelizIBSystems.Models.Ordenes>
+
+@{
+    ViewBag.Title = "Listado de ordenes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listado de ordenes</h2>
+
+<p>
+    @Html.ActionLink("Crear orden", "Crear")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model[0].IdOrden)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].Cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].FechaHoraOrden)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdOrden)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Nombres + " " + item.Cliente.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaHoraOrden)
+            </td>
+            <td>
+                @Html.ActionLink("Detalles", "Detalles", new { idOrden = item.IdOrden })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -15,5 +15,7 @@ namespace PruebaLucasFelizIBSystems.Models
         public DbSet<Productos> Productos { get; set; }
         public DbSet<ImagenesProducto> ImagenesProducto { get; set; }
         public DbSet<Clientes> Clientes { get; set; }
+        public DbSet<Ordenes> Ordenes { get; set; }
+        public DbSet<ProductosOrdenes> ProductosOrdenes { get; set; }
     }
 }
